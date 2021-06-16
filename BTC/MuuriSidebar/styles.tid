@@ -1,0 +1,52 @@
+title: $:/plugins/BTC/MuuriSidebar/styles
+tags: $:/tags/Stylesheet
+
+<$vars storyHighZIndex={{{ [list[$:/SideBarMuuriList]count[]add[201]] }}}>
+
+.tc-muuri-sidebar-river {
+	min-height: 250px;
+}
+
+.tc-muuri-sidebar-river .tc-tiddler-frame {
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+
+.tc-drag-container .tc-tiddler-frame {
+	height: auto !important;
+}
+
+.tc-sidebar-header .tc-sidebar-lists .tc-muuri-sidebar-river p {
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+.tc-sidebar-header .tc-sidebar-lists .tc-muuri-sidebar-river {
+	color: <<colour foreground>>;
+}
+
+.tc-sidebar-lists .tc-muuri-sidebar-river a.tc-tiddlylink {
+    color: <<colour primary>>;
+}
+
+.tc-sidebar-lists .tc-muuri-sidebar-river .tc-drop-down a, .tc-sidebar-lists .tc-muuri-sidebar-river .tc-drop-down button {
+    color: <<colour foreground>>;
+}
+
+<$list filter="[all[tiddlers]prefix[$:/state/popup/more-]limit[1]]">
+
+	.tc-muuri-sidebar-river.tc-muuri-river > .tc-tiddler-frame .tc-tag-list-item {
+		z-index: -1;
+	}
+
+	.tc-muuri-sidebar-river.tc-muuri-river > .tc-tiddler-frame [data-grid="muuri"] {
+		z-index: -1 !important;
+	}
+
+</$list>
+
+.tc-muuri-sidebar-river.tc-muuri-river > .tc-tiddler-frame.tc-muuri-dragging, .tc-muuri-sidebar-river.tc-muuri-river > .tc-tiddler-frame.tc-muuri-releasing, .tc-muuri-sidebar-river.tc-muuri-river > .tc-tiddler-frame:focus-within, .tc-muuri-sidebar-river.tc-muuri-river > .tc-tiddler-frame.tc-active {
+	z-index: <<storyHighZIndex>>;
+}
+
+</$vars>
