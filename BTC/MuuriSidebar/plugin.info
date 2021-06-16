@@ -1,0 +1,8 @@
+{
+	"title": "$:/plugins/BTC/MuuriSidebar",
+	"description": "A Muuri Grid in the Sidebar",
+	"author": "Simon Huber",
+	"version": "0.1.0",
+	"list": "readme license usage",
+	"muuri-tiddler-width": "1"
+}
